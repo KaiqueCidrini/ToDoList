@@ -1,0 +1,56 @@
+﻿@model ToDoList.Models.ToDo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ToDo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrição)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrição)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vencimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Feito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Feito)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

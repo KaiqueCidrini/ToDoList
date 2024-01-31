@@ -1,0 +1,50 @@
+﻿@model ToDoList.Models.ToDo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ToDo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Título)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Título)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descrição)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descrição)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vencimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vencimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Feito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Feito)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
